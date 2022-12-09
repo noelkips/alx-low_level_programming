@@ -1,21 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (Succes)
  */
+
 int main(void)
 {
 	int n;
 
-	n=0;
-	while(n < 10)
+	for (n = 0 ; n < 10 ; n++)
 	{
 		putchar(n + '0');
-		putchar(',');
-		putchar(' ');
-		n++;
+		if (n < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
