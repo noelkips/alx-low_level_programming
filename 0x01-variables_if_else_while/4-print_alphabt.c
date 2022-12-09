@@ -1,20 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
- * main - Entry point
+ * 
+ * main -Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
 	char c;
 
-	c='a';
-	while(c !='e' | c!='q')
+	for (c = 'a' ; c <= 'z' ; c++)
 	{
-		putchar(c);
-		c++;
+		if (( c == 'q' || c == 'e' ) !=1)
+		{
+			putchar(c);
+		}
 	}
 	putchar('\n');
 	return (0);
