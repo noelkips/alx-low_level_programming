@@ -13,16 +13,16 @@ int main(void)
 	for (n = 0 ; n < 9 ; n++)
 	{
 		i = n + 1;
-		do{
-			putchar('0' +n);
-			putchar('0' +i);
+		do {
+			putchar('0' + n);
+			putchar('0' + i);
 			if (n < 8)
 			{
 				putchar(',');
 				putchar(' ');
 			}
 			i++;
-		}while (i < 10);
+		} while (i < 10);
 	}
 	putchar('\n');
 	return (0);
