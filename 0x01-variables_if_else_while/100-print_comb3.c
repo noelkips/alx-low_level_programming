@@ -7,28 +7,23 @@
  */
 int main(void)
 {
-	int num_1;
-	int num_2;
+	int n;
+	int i;
 
-	for(num_1 = 0; num_1 < 10; num_1 ++)
+	for (n = 0 ; n < 9 ; n++)
 	{
-		for(num_2 = 0; num_2 < 10; num_2 ++)
-		{
-			if ((num_1 && num_2)| (num_2 && num_1))
-					if ((num_1+num_2 ) < (num_2+num_1))
-					{
-						putchar('0' +num_1);
-						putchar('0' + num_2);
-						putchar(',');
-						putchar(' ');
-					}else
-					{
-						putchar('0' + num_2);
-						putchar('0' + num_1);
-						putchar(',');
-						putchar(' ');
-					}
-		}
+		i = n + 1;
+		do{
+			putchar('0' +n);
+			putchar('0' +i);
+			if (n < 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			i++;
+		}while (i < 10);
 	}
+	putchar('\n');
+	return (0);
 }
-
