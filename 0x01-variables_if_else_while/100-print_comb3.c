@@ -17,14 +17,14 @@ int main(void)
 			if ((num_1 && num_2)| (num_2 && num_1))
 					if ((num_1+num_2 ) < (num_2+num_1))
 					{
-						putchar(num_1);
-						putchar(num_2);
+						putchar('0' +num_1);
+						putchar('0' + num_2);
 						putchar(',');
 						putchar(' ');
 					}else
 					{
-						putchar(num_2);
-						putchar(num_1);
+						putchar('0' + num_2);
+						putchar('0' + num_1);
 						putchar(',');
 						putchar(' ');
 					}
