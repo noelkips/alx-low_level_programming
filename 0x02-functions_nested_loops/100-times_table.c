@@ -22,7 +22,15 @@ void print_times_table(int n)
 			{
 				prod = a * b;
 				printf("%d", prod);
-				printf(" ");
+				if (b == n)
+				{
+					printf(" ");
+				}
+				else
+				{
+					printf(",");
+					printf(" ");
+				}
 			}
 			printf("\n");
 
