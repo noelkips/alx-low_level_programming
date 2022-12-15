@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * print_line -print a straight line in the terminal
- *@n: input integer, descripes the lenght of line to draw
- * Return: 0 (Success)
+ * print_diagonal - print diagonal of a given line
+ * @n: input integer (lenght of diagonal)
+ * Return: diagonal of a line
  */
 
 void print_diagonal(int n)
 {
 	int i;
-	int j = 0 ;
+	int j = 0;
 
 	if (n <= 0)
 	{
