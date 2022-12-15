@@ -7,11 +7,12 @@
  */
 int main(void)
 {
-	int a, b , c, temp_1, temp_2, i, sum;
-	a = 1;
-	b = 2;
+	unsigned long int  a, b , c, temp_1, temp_2, sum;
+	int i;
+	a = 0;
+	b = 1;
 
-	for (i = 1; i <= 4000000 ; i++)
+	for (i = 1; i <= 400; i++)
 	{
 		c = a + b;
 		temp_1 = b;
@@ -19,13 +20,13 @@ int main(void)
 		a = temp_1;
 		b = temp_2;
 		
-		if (a % 2 == 0)
+		if (c % 2 == 0)
 		{
-			sum += a;
+			sum += c;
 		}
 
 
 	}
-	printf("%d\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }

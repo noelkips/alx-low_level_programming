@@ -7,13 +7,10 @@
  */
 int main(void)
 {
-	int a, b , c, temp_1, temp_2, i;
-	a = 1;
-	b = 2;
+	unsigned long a, b , c, temp_1, temp_2, i;
+	a = 0;
+	b = 1;
 
-	printf("%d", a);
-	printf(",");
-	printf(" ");
 	for (i = 2; i <= 98 ; i++)
 	{
 		c = a + b;
@@ -22,9 +19,15 @@ int main(void)
 		a = temp_1;
 		b = temp_2;
 		
-		printf("%d", a);
-		printf(",");
-		printf(" ");
+		printf("%lu", a);
+		if (i == 98)
+			printf(" ");
+		else
+		{
+			printf(",");
+			printf(" ");
+		}
+
 	}
 	printf("\n");
 	return (0);
