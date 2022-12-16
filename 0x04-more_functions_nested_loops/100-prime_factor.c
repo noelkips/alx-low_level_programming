@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 /**
  * main - main block
@@ -13,13 +13,17 @@ int main(void)
 	int n;
 	long l = 612852475143;
 
-	for (n = (int) sqrt(num); n > 2 ; n++)
+	while (l % 2 == 0)
+	{
+		l = l / 2;
+	}
+	for (n = 3; n <= (int)sqrt(l); n++)
 	{
 		if (l % n == 0)
 		{
-			printf("%d\n", n);
-			break;
+			l = l / n;
 		}
 	}
+	printf("%ld\n", l);
 	return (0);
 }
