@@ -11,7 +11,7 @@ int main(void)
 
 	char password[PASSWORD_LENGTH + 1]; /* 1 for '\0' teminator */
 
-	for (int i = 0; i< PASSWORD_LENGHT; i++)
+	for (int i = 0; i< PASSWORD_LENGTH; i++)
 	{
 		int index = rand() % NUM_CHARS;
 		if (index < 26)
@@ -23,7 +23,7 @@ int main(void)
 		}
 	}
 
-	password[PASSWORD_LENGHT] = '\0';
+	password[PASSWORD_LENGTH] = '\0';
 	printf("Password generated is : %s\n",password);
 
 	return 0;
