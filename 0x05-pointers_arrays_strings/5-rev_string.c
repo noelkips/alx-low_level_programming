@@ -3,23 +3,29 @@
 #include <stdio.h>
 
 /**
- * rev_string - prints a string in reverse
- * @s: the string to print
- * Return: string in reverse
- */
-
+  * rev_string - reverse a string.
+  * @s: string to reverse
+  */
 void rev_string(char *s)
 {
-	int len = strlen(s);
-	int i, j, temp;
+	int start, temp;
+	int end = 0;
 
-	for (i = 0 ; i < len ; i++)
+	while (*(s + end) != '\0')
 	{
-		for (j = len-1 ; j >= 0 ; j--)
-		{
-			temp = s[j];
-			s[j] = s[i];
-			s[i] = temp;
-		}
+		end++;
 	}
+
+	end -= 1;
+	start = 0;
+	while (end > start)
+	{
+		temp = s[start];
+		s[start] = s[end];
+		s[end] = temp;
+		start++;
+		end--;
+	}
+
 }
+
