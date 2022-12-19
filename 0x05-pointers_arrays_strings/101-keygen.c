@@ -2,28 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 100
-#define NUM_CHARS 100
+#define MIN_PASS_LEN 8
+#define MAX_PASS_LEN 16
+#define NUM_SPECIAL_CHARS 3
+
+char special_chars[] ={'!', '@', '#'};
 
 int main(void)
 {
-	srand(time(0));
+	int i, pass_len;
+	char password[MAX_PASS_LEN + 1];
 
-	char password[PASSWORD_LENGTH + 1]; /* 1 for '\0' teminator */
+	srand(time(NULL));
 
-	for (int i = 0; i< PASSWORD_LENGTH; i++)
+	pass_len = MIN_PASS_LEN + rand() % (MAX_PASS_LEN - MIN_PASS_LEN +1);
+
+	for (i = 0; i < pass_len; i++)
 	{
-		int index = rand() % NUM_CHARS;
-		if (index < 26)
-		{
-			password[i] = 'a' + index;
-		} else if (index < 52)
-		{
-			password[i] = '0' + index -52;
-		}
+		if (rand() % 2 == 0)
+			password[i] = 'a' +rand() % 26;
+		else
+			password[i] = special_chars[rand() % NUM_SPECIAL_CHARS];
 	}
-
-	password[PASSWORD_LENGTH] = '\0';
 	printf("Password generated is : %s\n",password);
 
 	return 0;
