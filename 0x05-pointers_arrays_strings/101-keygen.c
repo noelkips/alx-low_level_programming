@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
-#define NUM_CHARS 62
+#define PASSWORD_LENGTH 100
+#define NUM_CHARS 100
 
 int main(void)
 {
