@@ -2,7 +2,7 @@
 
 /**
  * cap_string - capitalize string
- * @str: string
+ * @s: string
  * Return: capitalized string
  */
 
@@ -10,7 +10,6 @@ char *cap_string(char *s)
 {
 	int i;
 
-/*  scan through string */
 	i = 0;
 	while (s[i] != '\0')
 	{
