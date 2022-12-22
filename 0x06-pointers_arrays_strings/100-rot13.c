@@ -11,7 +11,7 @@ char *rot13(char *str)
 {
 	int i;
 
-	for ( i = 0; str[i] != '\0', i++)
+	for ( i = 0; str[i] != '\0'; i++)
 	{
 		for (i = 0; ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M')); i++)
 		{
