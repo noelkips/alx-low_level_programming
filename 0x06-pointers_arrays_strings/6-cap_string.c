@@ -6,43 +6,31 @@
  * Return: capitalized string
  */
 
-char *cap_string(char *str)
-{
-	char sep[] = {32, 10, 9, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-
-	int i = 0;
-
-	while (sep[i] != '\0')
-	{
-		if (s == sep[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-/**
-* cap_string - This function capitalizes all words of a string.
-* @s: sring to be processed.
-*
-* Return: pointer to the modified string.
-*/
 char *cap_string(char *s)
 {
-	int sep, i;
+	int i;
 
-	sep = 1;
+/*  scan through string */
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (sep == 1 && (s[i] >= 'a' && s[i] <= 'z'))
+		if (s[0] >= 97 && s[0] <= 122)
 		{
-			s[i] -= 32;
-			sep = 0;
+			s[0] = s[0] - 32;
 		}
-		sep = is_sep(s[i]);
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'
+		    || s[i] == ',' || s[i] == ';' || s[i] == '.'
+		    || s[i] == '.' || s[i] == '!' || s[i] == '?'
+		    || s[i] == '"' || s[i] == '(' || s[i] == ')'
+		    || s[i] == '{' || s[i] == '}')
+		{
+			if (s[i + 1] >= 97 && s[i + 1] <= 122)
+			{
+				s[i + 1] = s[i + 1] - 32;
+			}
+		}
 		i++;
-}
+	}
 	return (s);
 }
 
