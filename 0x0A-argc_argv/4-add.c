@@ -5,8 +5,8 @@
 
 /**
  * main- Entry point
- * @agrc: integer number for the command-line arguments passed
- * argv: array containing command-line arguments passed
+ * @argc: integer number for the command-line arguments passed
+ * @argv: array containing command-line arguments passed
  * during execution as strings
  * Return: 0 (Success)
  */
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int i, j, n, sum;
 	char *p;
 
-	if ( argc < 2)
+	if (argc < 2)
 		printf("0\n");
 	else
 	{
