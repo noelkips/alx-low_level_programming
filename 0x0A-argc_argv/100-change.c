@@ -1,28 +1,73 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <stdbool.h>
 
 /**
- * _atoi - convert a string to an integer.
- * @s: the string to be comverted.
- *
- *Return: The integer value of the comverted string.
+ * coinConverter - Helper function that does all the mathematics
+ * @i: Passed in variable from main for calculations
+ * Return: The number of coins needed minimum for the passed in variable
  */
-
-int _atoi(char *s)
+int coinConverter(int i)
 {
-	int sign = 1;
-	unsigned int num = 0;
+	int count = 0;
 
-	do {
+	while (i != 0)
+	{
+		if (i % 10 == 9 || i % 10 == 7)
+			i -= 2;
+		else if (i % 25 == 0)
+			i -= 25;
+		else if (i % 10 == 0)
+			i -= 10;
+		else if (i % 5 == 0)
+			i -= 5;
+			else if (i % 2 == 0)
+		{
+			if (i % 10 == 6)
+				i -= 1;
+			else
+				i -= 2;
+		}
+		else
+			i -= 1;
 
-		if (*s == '-')
-			sign *= -1;
+		count++;
+	}
 
-		else if (*s >= '0' && *s <= '9')
-			num = (num * 10) + (*s - '0');
+	return (count);
+}
 
-		else if (num > 0)
-			break;
-	} while (*s++);
+/**
+ * main - Entry
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 0 if exactly 1 argument is passed into this program, 1 otherwise
+ */
+int main(int argc, char *argv[])
+{
+	int i, coin;
 
-	return (num * sign);
+	coin = 0;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	i = atoi(argv[1]);
+
+	if (i < 0)
+		printf("0\n");
+
+	else
+	{
+		coin = coinConverter(i);
+
+		printf("%d\n", coin);
+	}
+
+	return (0);
 }
