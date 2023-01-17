@@ -3,10 +3,8 @@
 #include "dog.h"
 
 /**
- * print_dog - print stucture dog
- * @d:  dog structure
- * @name: dog's name
- * 
+ * print_dog- print structure dog
+ * @d: dog structure
  * Return: none
  */
 
