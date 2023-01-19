@@ -3,17 +3,6 @@
 
 
 /**
- * print_name_func- prints name
- * @name: name to print
- * Return: none
- */
-
-void print_name_func(char *name)
-{
-	printf("%s", name);
-}
-
-/**
  * print_name- prints name
  * @name: name to print
  * @f: pointer to function that prints name
@@ -22,5 +11,6 @@ void print_name_func(char *name)
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name && f)
+		f(name);
 }
