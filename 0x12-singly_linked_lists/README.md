@@ -1,10 +1,8 @@
 # **0x12-singly_linked_lists**
 
-The resources and the projects done in this repository covers the following:
-
--When and why using linked lists vs arrays
-
--How to build and use linked lists
+The resources and the projects done in this repository covers the following<br>
+1. When and why using linked lists vs arrays
+2. How to build and use linked lists
 
 **Resources**
 
