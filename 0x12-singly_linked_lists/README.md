@@ -2,9 +2,9 @@
 
 The resources and the projects done in this repository covers the following:
 
-_ When and why using linked lists vs arrays
+-When and why using linked lists vs arrays
 
-_ How to build and use linked lists
+-How to build and use linked lists
 
 **Resources**
 
