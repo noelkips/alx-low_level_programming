@@ -1,5 +1,8 @@
 # **0x13. C - More singly linked lists**
 
+![image](./linked_list.png)
+picture from : https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png
+
 This is acontinuation of [linked list projcet](../0x12-singly_linked_lists)
  
 
