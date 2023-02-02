@@ -3,7 +3,9 @@
 ![image](./linked_list.png)<br>
 picture from : https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png
 
-This is acontinuation of [linked list projcet](../0x12-singly_linked_lists)
+
+
+# This is a continuation of **[linked list projcet](../0x12-singly_linked_lists)**
  
 
 # Resources<br>
@@ -150,4 +152,49 @@ Write a function that adds a new node at the beginning of a listint_t list.<br>
 	0
 	vagrant@ubuntu-focal:~/alx-low_level_programming/0x13-more_singly_linked_lists$
 
-[
+[3. Add node at the end](./3-add_nodeint_end.c)<br>
+Write a function that adds a new node at the end of a listint_t list.<br>
+> * Prototype: listint_t *add_nodeint_end(listint_t **head, const int n);
+> * Return: the address of the new element, or NULL if it failed
+
+
+	vagrant@ubuntu-focal:~/alx-low_level_programming/0x13-more_singly_linked_lists$ cat test_files/3-main.c
+	#include <stdlib.h>
+	#include <string.h>
+	#include <stdio.h>
+	#include "../lists.h"
+	
+	/**
+ 	* main - check the code
+	*
+ 	* Return: Always 0.
+ 	*/
+	int main(void)
+	{
+    	listint_t *head;
+	
+    	head = NULL;
+    	add_nodeint_end(&head, 0);
+    	add_nodeint_end(&head, 1);
+    	add_nodeint_end(&head, 2);
+    	add_nodeint_end(&head, 3);
+    	add_nodeint_end(&head, 4);
+    	add_nodeint_end(&head, 98);
+    	add_nodeint_end(&head, 402);
+    	add_nodeint_end(&head, 1024);
+    	print_listint(head);
+    	return (0);
+	}
+	vagrant@ubuntu-focal:~/alx-low_level_programming/0x13-more_singly_linked_lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 test_files/3-main.c 3-add_nodeint_end.c 0-print_listint.c -o d
+	vagrant@ubuntu-focal:~/alx-low_level_programming/0x13-more_singly_linked_lists$ ./d
+	0
+	1
+	2
+	3
+	4
+	98
+	402
+	1024
+	vagrant@ubuntu-focal:~/alx-low_level_programming/0x13-more_singly_linked_lists$
+
+

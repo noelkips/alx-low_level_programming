@@ -3,7 +3,7 @@
 
 /**
  * listint_len -return number of elememnts in listint_t list
- * @h: pointer to listint_t
+ * @h: head pointer of listint_t
  *
  * Return: number of nodes
  */
